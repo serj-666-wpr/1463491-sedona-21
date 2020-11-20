@@ -1,5 +1,18 @@
 .advantage {
   padding: 25px;
+
+  &--blue {
+    background-color: @blue;
+    color: @white;
+
+    .advantage__caption {
+      color: @white;
+    }
+  }
+
+  &--silver {
+    background-color: @grey-lighter;
+  }
 }
 
 .advantage__caption {
@@ -11,22 +24,8 @@
   text-align: center;
 }
 
-.advantage__number,
 .advantage__text {
   line-height: 21px;
   margin: 0;
   text-align: center;
-}
-
-.advantage--blue {
-  background-color: @blue;
-  color: @white;
-
-  .advantage__caption {
-    color: @white;
-  }
-}
-
-.advantage--silver {
-  background-color: @grey-lighter;
 }
