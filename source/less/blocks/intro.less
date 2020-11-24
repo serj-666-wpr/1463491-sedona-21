@@ -1,6 +1,20 @@
 .intro {
-  padding-bottom: 16px;
+  padding-bottom: 37px;
   border-bottom: 1px solid @grey-light;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.intro__wrapper {
+  max-width: 285px;
+  margin: 0 auto;
+  padding: 32px 0 11px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 520px;
+  }
 }
 
 .intro__caption {
@@ -9,7 +23,12 @@
   line-height: 26px;
   color: @black;
   margin-top: 0;
+  margin-bottom: 36px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .intro__text {

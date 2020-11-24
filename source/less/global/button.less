@@ -4,8 +4,14 @@
   font-size: 21px;
   line-height: 26px;
   width: max-content;
+  box-sizing: border-box;
   background-color: @blue;
   color: @white;
-  padding: 18px 32px 14px;
+  padding: 16px 32px;
   margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-width: 458px;
+  }
 }

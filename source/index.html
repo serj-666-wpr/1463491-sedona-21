@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a href="" class="page-header__logo">
-        <img src="" width="102" height="84" alt="Логотип сайта «Седона»">
+      <a class="page-header__logo">
+        <img src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
       </a>
 
       <nav class="main-nav">
@@ -16,7 +17,7 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--current">
           <li class="main-nav__item">
             <a href="">Главная</a>
           </li>
@@ -38,13 +39,13 @@
       <h1 class="visually-hidden">Городок «Седона»</h1>
 
       <section class="intro">
+        <h2 class="visually-hidden">Интро</h2>
+
+        <header class="intro__header header header--main">
+          <img class="header__caption" src="" width="282" height="49" alt="">
+        </header>
+
         <div class="intro__wrapper">
-          <h2 class="visually-hidden">Интро</h2>
-
-          <header class="intro__header header header--main">
-            <img class="header__caption" src="" width="282" height="49" alt="">
-          </header>
-
           <h3 class="intro__caption">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
@@ -53,13 +54,13 @@
       <section class="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
 
-          <div class="advantages__wrapper">
+          <div class="advantages__wrapper advantages__wrapper--image">
             <div class="advantages__first advantage advantage--blue">
               <h3 class="advantage__caption">Настоящий Городок</h3>
               <p class="advantage__text">— №1 —</p>
               <p class="advantage__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages__first-image" src="" width="" height="" alt="">
+            <img class="advantages__image" src="img/city.jpg" width="800" height="256" alt="">
           </div>
 
           <div class="advantages__wrapper">
@@ -87,13 +88,13 @@
             </ul>
           </div>
 
-          <div class="advantages__wrapper">
+          <div class="advantages__wrapper advantages__wrapper--image-first">
             <div class="advantages__second advantage advantage--blue">
               <h3 class="advantage__caption">Там есть мост дьявола</h3>
               <p class="advantage__text">— №2 —</p>
               <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages__second-image" src="" width="" height="" alt="">
+            <img class="advantages__image advantages__image--first" src="img/bridge.jpg" width="800" height="256" alt="">
           </div>
 
           <div class="advantages__wrapper">
