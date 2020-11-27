@@ -1,0 +1,33 @@
+.page-header {
+  position: relative;
+  padding-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
+}
+
+.page-header__image {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__image-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
