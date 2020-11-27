@@ -1,6 +1,26 @@
 .header {
-  height: 518px;
-  background-image: url("../img/background-header.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  &--main {
+    background-image: url("../img/background-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 901px 389px;
+
+    @media (min-width: @tablet-width) {
+      background-size: cover;
+    }
+  }
+}
+
+.header__caption {
+  &--main {
+    display: block;
+    padding: 90px 0 85px;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      width: 460px;
+      height: 360px;
+      padding: 72px 0 90px;
+    }
+  }
 }

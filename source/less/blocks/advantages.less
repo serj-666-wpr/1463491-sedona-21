@@ -1,20 +1,16 @@
 .advantages__wrapper {
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
     &--image {
       display: grid;
       grid-template-columns: 1fr 2fr;
+      background-color: @blue;
     }
 
     &--image-first {
       display: grid;
       grid-template-columns: 2fr 1fr;
+      background-color: @blue;
     }
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 1200px;
   }
 }
 
@@ -36,5 +32,11 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+  }
+}
+
+.advantages__item {
+  @media (min-width: @tablet-width) {
+    width: 33.333%;
   }
 }
