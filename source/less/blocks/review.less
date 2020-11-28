@@ -1,10 +1,110 @@
+.review__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
+}
+
+.review__form {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
 .review__item {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-bottom: 1px solid @grey-light;
+  padding: 0;
+  margin: 0;
   padding-bottom: 38px;
+  margin-bottom: 10px;
 
   &:last-of-type {
-    border: none;
+    border-bottom: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    border-top: 1px solid @grey-light;
+  }
+
+  &--introduce {
+    @media (min-width: @tablet-width) {
+      border-top: 0;
+      padding-left: 58px;
+
+      .review__caption {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 80px;
+    }
+  }
+
+  &--contact {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &--impression {
+    @media (min-width: @tablet-width) {
+      order: -1;
+      border-top: 0;
+
+      .review__caption {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      .review__caption {
+        padding-left: 80px;
+      }
+    }
+  }
+
+  &--visited {
+    display: flex;
+
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      width: 484px;
+      margin: 0 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+      margin: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &--textarea {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 }
 
@@ -13,7 +113,6 @@
   font-size: 18px;
   color: @black;
   text-align: center;
-  padding-top: 28px;
   margin-bottom: 15px;
 }
 
@@ -21,4 +120,13 @@
   font-family: inherit;
   text-transform: uppercase;
   border: none;
+}
+
+.review__legend {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    text-align: right;
+  }
 }
