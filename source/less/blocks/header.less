@@ -1,7 +1,16 @@
 .header {
+  background-image: url("../img/background-header-mini.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 902px 214px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background-header.jpg");
+    background-size: auto;
+  }
+
   &--main {
     background-image: url("../img/background-header.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 901px 389px;
 
@@ -12,10 +21,18 @@
 }
 
 .header__caption {
+  display: block;
+  margin: 0 auto;
+  padding: 51px 0 67px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+    padding: 95px 0 117px;
+  }
+
   &--main {
-    display: block;
     padding: 90px 0 85px;
-    margin: 0 auto;
 
     @media (min-width: @tablet-width) {
       width: 460px;
