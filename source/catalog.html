@@ -7,130 +7,168 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img src="" width="102" height="84" alt="Логотип сайта «Седона»">
-      </a>
+    <div class="page__wrapper">
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <header class="page-header">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
+          <img class="page-header__image-desktop" src="img/logotype-desktop.svg" width="187" height="96" alt="Логотип сайта «Седона»">
+        </a>
 
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="">Фото и видео</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Html Academy</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">Фотогалерея «Седона»</h1>
+          <ul class="main-nav__list main-nav__list--current">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Html Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <section class="intro">
-        <div class="intro__wrapper">
+      <main class="page-main">
+        <h1 class="visually-hidden">Фотогалерея «Седона»</h1>
+
+        <section class="intro">
           <h2 class="visually-hidden">Интро каталога</h2>
 
           <header class="intro__header header">
-            <img class="header__caption" src="" width="282" height="49" alt="">
+            <img class="header__caption" src="img/header-text.svg" width="229" height="39" alt="">
           </header>
+          <div class="intro__wrapper">
+            <h3 class="intro__caption">Фото и видео</h3>
+            <p class="intro__text">Не можете решиться на путешествие из-за курса?<br class="break"> Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
+        </section>
 
-          <h3 class="intro__caption">Фото и видео</h3>
-          <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
-      </section>
+        <section class="catalog">
+          <div class="catalog__wrapper">
+            <h2 class="visually-hidden">Каталог</h2>
 
-      <section class="catalog">
-        <div class="catalog__wrapper">
-          <h2 class="visually-hidden">Каталог</h2>
+            <ul class="catalog__list">
+              <li class="catalog__item catalog__item--first">
+                <figure class="photograph">
+                  <a class="photograph__link" href="#">
+                    <img class="photograph__image photograph__image--first" src="img/non-native-spaces.jpg" width="280" height="280" alt="Дорога в американской пустыне во время заката">
+                  </a>
+                  <figcaption class="photograph__legend">
+                    <div class="photograph__wrapper">
+                      <h3 class="photograph__caption">Неродные просторы</h3>
+                      <p class="photograph__text">Автор фото: Борис</p>
+                    </div>
+                    <div class="photograph__likes">
+                      <a class="photograph__like" href="">
+                        <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                        </svg>
+                      </a>
+                      <p class="photograph__like-number">1350</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="catalog__item">
+                <figure class="photograph">
+                  <a class="photograph__link" href="#">
+                    <img class="photograph__image" src="img/local-vegetation.jpg" width="280" height="280" alt="Кактус в американской пустыне">
+                  </a>
+                  <figcaption class="photograph__legend">
+                    <div class="photograph__wrapper">
+                      <h3 class="photograph__caption">Местная растительность</h3>
+                      <p class="photograph__text">Автор фото: Сергей</p>
+                    </div>
+                    <div class="photograph__likes">
+                      <a class="photograph__like" href="">
+                        <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                        </svg>
+                      </a>
+                      <p class="photograph__like-number">143</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="catalog__item">
+                <figure class="photograph">
+                  <a class="photograph__link" href="#">
+                    <img class="photograph__image" src="img/road-north.jpg" width="280" height="280" alt="Дорога в лесистых горах">
+                  </a>
+                  <figcaption class="photograph__legend">
+                    <div class="photograph__wrapper">
+                      <h3 class="photograph__caption">Дорога на север</h3>
+                      <p class="photograph__text">Автор фото: Петр</p>
+                    </div>
+                    <div class="photograph__likes">
+                      <a class="photograph__like" href="">
+                        <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                        </svg>
+                      </a>
+                      <p class="photograph__like-number">96</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="catalog__item">
+                <figure class="photograph">
+                  <a class="photograph__link" href="#">
+                    <img class="photograph__image" src="img/devil-bridge.jpg" width="280" height="280" alt="Естественный мост из скал">
+                  </a>
+                  <figcaption class="photograph__legend">
+                    <div class="photograph__wrapper">
+                      <h3 class="photograph__caption">Мост дьявола</h>
+                      <p class="photograph__text">Автор фото: Антон</p>
+                    </div>
 
-          <ul class="catalog__list">
-            <li class="catalog__item catalog__item--first">
-              <figure class="photograph">
-                <a class="photograph__link" href="#">
-                  <img class="photograph__image" src="" width="280" height="280" alt="Дорога в американской пустыне во время заката">
-                </a>
-                <figcaption class="photograph__legend">
-                  <h3 class="photograph__caption">Неродные просторы</h3>
-                  <p class="photograph__text">Автор фото: Борис</p>
-                  <p class="photograph__likes">1350</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="catalog__item">
-              <figure class="photograph">
-                <a class="photograph__link" href="#">
-                  <img class="photograph__image" src="" width="280" height="280" alt="Кактус в американской пустыне">
-                </a>
-                <figcaption class="photograph__legend">
-                  <h3 class="photograph__caption">Местная растительность</h3>
-                  <p class="photograph__text">Автор фото: Сергей</p>
-                  <p class="photograph__likes">143</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="catalog__item">
-              <figure class="photograph">
-                <a class="photograph__link" href="#">
-                  <img class="photograph__image" src="" width="280" height="280" alt="Дорога в лесистых горах">
-                </a>
-                <figcaption class="photograph__legend">
-                  <h3 class="photograph__caption">Дорога на север</h3>
-                  <p class="photograph__text">Автор фото: Петр</p>
-                  <p class="photograph__likes">96</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="catalog__item">
-              <figure class="photograph">
-                <a class="photograph__link" href="#">
-                  <img class="photograph__image" src="" width="280" height="280" alt="Естественный мост из скал">
-                </a>
-                <figcaption class="photograph__legend">
-                  <h3 class="photograph__caption">Мост дьявола</h3>
-                  <p class="photograph__text">Автор фото: Антон</p>
-                  <p class="photograph__likes">254</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
+                    <div class="photograph__likes">
+                      <a class="photograph__like" href="">
+                        <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
+                        </svg>
+                      </a>
+                      <p class="photograph__like-number">254</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
 
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section class="video-presentation">
-        <div class="video-presentation__wrapper">
-          <h2 class="visually-hidden">Видео презентация</h2>
+        <section class="video-presentation">
+          <div class="video-presentation__wrapper">
+            <h2 class="visually-hidden">Видео презентация</h2>
 
-            <div class="intro">
-              <p class="intro__caption">Все еще сомневаетесь?</p>
-              <p class="intro__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-            </div>
+              <div class="intro">
+                <p class="intro__caption">Все еще сомневаетесь?</p>
+                <p class="intro__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br class="break"> не подорожали в очередной раз!</p>
+              </div>
 
-            <div class="video">
-              <video class="video__content" poster="" width="320" height="201">
-                <source src="" type="">
-              </video>
-              <button class="video__button video__button--replay"></button>
-              <button class="video__button video__button--subtitles"></button>
-              <button class="video__button video__button--size"></button>
-            </div>
-        </div>
-      </section>
-    </main>
+              <div class="video">
+                <video class="video__content" poster="" width="320" height="201">
+                  <source src="" type="">
+                </video>
+                <button class="video__button video__button--replay"></button>
+                <button class="video__button video__button--subtitles"></button>
+                <button class="video__button video__button--size"></button>
+              </div>
+          </div>
+        </section>
+      </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <footer class="page-footer">
         <p class="page-footer__hashtag">#visitsedona</p>
 
         <div class="page-footer__social social">
@@ -152,11 +190,11 @@
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="" width="27" height="34" alt="">
+            <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </div>
-      </div>
-    </footer>
+      </footer>
 
+    </div>
   </body>
 </html>
