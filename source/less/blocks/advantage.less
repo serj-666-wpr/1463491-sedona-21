@@ -1,6 +1,28 @@
+.advantage__caption {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @black;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 14px;
+  }
+}
+
 .advantage {
-  padding: 25px;
+  padding: 51px 10px 39px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 32px 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 60px 39px;
+  }
 
   &--blue {
     background-color: @blue;
@@ -11,30 +33,124 @@
     }
   }
 
+  &--blue-second {
+    padding: 40px 10px 35px;
+
+    @media (min-width: @tablet-width) {
+      padding: 43px 32px 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 51px 84px 35px;
+    }
+  }
+
   &--subitem {
+    position: relative;
     text-align: left;
-    padding-left: 75px;
+    padding: 14px 20px 10px 69px;
 
     @media (min-width: @tablet-width) {
       text-align: center;
-      padding-left: 0;
+      padding: 158px 32px 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 158px 48px 80px;
+    }
+
+    .advantage__caption {
+      margin-bottom: 18px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &--home {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 21px;
+      width: 39px;
+      height: 37px;
+      background-image: url("../img/home.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 72px;
+        background-size: 75px 72px;
+      }
+    }
+  }
+
+  &--souvenirs {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 25px;
+      width: 32px;
+      height: 38px;
+      background-image: url("../img/present.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 58px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 64px;
+        height: 75px;
+        background-size: 64px 75px;
+      }
+    }
+  }
+
+  &--food {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 18px;
+      width: 40px;
+      height: 35px;
+      background-image: url("../img/burger.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 63px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 76px;
+        height: 68px;
+        background-size: 76px 68px;
+      }
     }
   }
 
   &--silver {
+    padding: 26px 34px 24px;
     background-color: @grey-lighter;
-  }
-}
 
-.advantage__caption {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: @black;
-  margin-top: 0;
+    @media (min-width: @tablet-width) {
+      padding: 42px 55px;
+    }
+  }
 }
 
 .advantage__text {
   line-height: 21px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
