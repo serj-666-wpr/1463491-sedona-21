@@ -2,3 +2,38 @@
   .clear-list();
   display: flex;
 }
+
+.social__item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-right: 6px;
+    }
+  }
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  background-color: @blue;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--twitter {
+    background-image: url("../img/twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/youtube.svg");
+  }
+}

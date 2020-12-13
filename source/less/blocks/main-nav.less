@@ -1,44 +1,83 @@
 .main-nav {
   position: relative;
-
-  @media (min-width: @tablet-width) {
-    padding: 16px 40px 14px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 16px 80px 14px;
-  }
 }
 
-.main-nav__toggle {
+.main-nav__button {
   position: absolute;
+  bottom: -56px;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 23px;
+    height: 4px;
+    background-color: @blue;
+    box-shadow:
+      0 8px 0 0 @blue,
+      0 16px 0 0 @blue;
+  }
+
+  &--close {
+    top: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 17px;
+      width: 27px;
+      height: 4px;
+      background-color: @white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 }
 
 .main-nav__list {
   .clear-list();
   display: none;
-  flex-direction: column;
-  flex-wrap: wrap;
 
   &--current {
-    display: flex;
+    display: grid;
   }
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 1px;
+      order: 1;
+    }
   }
 }
 
 .main-nav__item {
-  @media (min-width: @tablet-width) {
-    &:nth-child(2) {
-      margin-right: 20%;
-    }
+  &:nth-child(3),
+  &:nth-child(4) {
+    order: 2;
   }
 
   a {
@@ -48,13 +87,19 @@
     line-height: 40px;
     color: @white;
     text-align: center;
+    padding: 8px 0 7px;
     background-color: @blue;
+    box-shadow:
+      0 1px 0 @black-opacity,
+      inset 0 1px 0 @white-opacity;
+    border-bottom: 1px solid @blue-dakrer;
 
     @media (min-width: @tablet-width) {
       font-size: 14px;
-      line-height: 26px;
       color: @black;
       background-color: transparent;
+      box-shadow: none;
+      border-bottom: none;
     }
   }
 }
