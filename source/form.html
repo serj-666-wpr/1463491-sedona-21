@@ -10,13 +10,13 @@
     <div class="page__wrapper">
 
       <header class="page-header">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo">
           <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
           <img class="page-header__image-desktop" src="img/logotype-desktop.svg" width="187" height="96" alt="Логотип сайта «Седона»">
         </a>
 
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
+          <button class="main-nav__button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
 
@@ -40,15 +40,15 @@
       <main class="page-main">
         <h1 class="visually-hidden">Отзывы «Седона»</h1>
 
-        <section class="intro">
+        <section class="intro intro--form">
           <h2 class="visually-hidden">Интро страницы отзыва</h2>
 
           <header class="intro__header header">
             <img class="header__caption" src="img/header-text.svg" width="229" height="39" alt="">
           </header>
-          <div class="intro__wrapper">
-            <h3 class="intro__caption">Оставьте свой отзыв</h3>
-            <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <div class="intro__wrapper intro__wrapper--form">
+            <h3 class="intro__caption intro__caption--form">Оставьте свой отзыв</h3>
+            <p class="intro__text intro__text--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
         </section>
 
@@ -57,77 +57,91 @@
 
           <div class="review__wrapper">
             <form class="review__form">
-              <fieldset class="review__item review__item--introduce">
-                <legend class="review__caption">Представьтесь:</legend>
-                <label class="input">
-                  <span class="input__label">Имя*:</span>
-                  <input class="input__field" type="text" name="name" placeholder="Петр" required>
-                </label>
-                <label class="input">
-                  <span class="input__label">Фамилия*:</span>
-                  <input class="input__field" type="text" name="surname" placeholder="Иванов" required>
-                </label>
-                <label class="input">
-                  <span class="input__label">Отчество:</span>
-                  <input class="input__field" type="text" name="patronymic" placeholder="Александрович">
-                </label>
-              </fieldset>
+              <div class="review__container review__container--introduce">
+                <fieldset class="review__item review__item--introduce">
+                  <legend class="review__caption review__caption--introduce">Представьтесь:</legend>
+                  <label class="input">
+                    <span class="input__label">Имя*:</span>
+                    <input class="input__field" type="text" name="name" placeholder="Петр" required>
+                  </label>
+                  <label class="input">
+                    <span class="input__label">Фамилия*:</span>
+                    <input class="input__field" type="text" name="surname" placeholder="Иванов" required>
+                  </label>
+                  <label class="input">
+                    <span class="input__label">Отчество:</span>
+                    <input class="input__field" type="text" name="patronymic" placeholder="Александрович">
+                  </label>
+                </fieldset>
+              </div>
 
-              <fieldset class="review__item review__item--contact">
-                <legend class="review__caption">Контактная информация:</legend>
-                <label class="input input--contact input--phone">
-                  <span class="input__label">Контактный телефон*:</span>
-                  <input class="input__field" type="tel" name="phone" placeholder="Введите телефон" required>
-                </label>
-                <label class="input input--contact input--email">
-                  <span class="input__label">Электронная почта*:</span>
-                  <input class="input__field" type="email" name="email" placeholder="Введите e-mail" required>
-                </label>
-              </fieldset>
+              <div class="review__container review__container--contact">
+                <fieldset class="review__item review__item--contact">
+                  <legend class="review__caption review__caption--contact">Контактная информация:</legend>
+                  <label class="input input--contact input--phone">
+                    <span class="input__label"><span class="break-clear">Контактный</span> телефон*:</span>
+                    <input class="input__field" type="tel" name="phone" placeholder="Введите телефон" required>
+                  </label>
+                  <label class="input input--contact input--email">
+                    <span class="input__label">Электронная почта*:</span>
+                    <input class="input__field" type="email" name="email" placeholder="Введите e-mail" required>
+                  </label>
+                </fieldset>
+              </div>
 
-              <fieldset class="review__item review__item--impression">
-                <legend class="review__caption">Ваше общее впечатление:</legend>
-                <label class="choice">
-                  <input class="choice__input visually-hidden" type="radio" name="впечатление" value="скорее положительное" checked>
-                  <span class="choice__text">Скорее положительное</span>
-                </label>
-                <label class="choice">
-                  <input class="choice__input visually-hidden" type="radio" name="впечатление" value="скорее отрицательное">
-                  <span class="choice__text">Скорее отрицательное</span>
-                </label>
-                <label class="choice">
-                  <input class="choice__input visually-hidden" type="radio" name="впечатление" value="затрудняюсь ответить">
-                  <span class="choice__text">Затрудняюсь ответить</span>
-                </label>
-              </fieldset>
+              <div class="review__container review__container--impression">
+                <fieldset class="review__item review__item--impression">
+                  <legend class="review__caption review__caption--impression">Ваше общее впечатление:</legend>
+                  <label class="choice">
+                    <input class="choice__input visually-hidden" type="radio" name="впечатление" value="скорее положительное" checked>
+                    <span class="choice__text">Скорее положительное</span>
+                  </label>
+                  <label class="choice">
+                    <input class="choice__input visually-hidden" type="radio" name="впечатление" value="скорее отрицательное">
+                    <span class="choice__text">Скорее отрицательное</span>
+                  </label>
+                  <label class="choice">
+                    <input class="choice__input visually-hidden" type="radio" name="впечатление" value="затрудняюсь ответить">
+                    <span class="choice__text">Затрудняюсь ответить</span>
+                  </label>
+                </fieldset>
+              </div>
 
-              <fieldset class="review__item review__item--visited">
-                <legend class="review__caption">Посещенные достопримечательности:</legend>
-                <label class="choice choice--checkbox">
-                  <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Мост Дьявола" checked>
-                  <span class="choice__text choice__text--checkbox">Мост Дьявола</span>
-                </label>
-                <label class="choice choice--checkbox">
-                  <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Гора-Колокол" checked>
-                  <span class="choice__text choice__text--checkbox">Гора-Колокол</span>
-                </label>
-                <label class="choice choice--checkbox">
-                  <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Слайд-парк" checked>
-                  <span class="choice__text choice__text--checkbox">Слайд-парк</span>
-                </label>
-                <label class="choice choice--checkbox">
-                  <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Красные скалы">
-                  <span class="choice__text choice__text--checkbox">Красные скалы</span>
-                </label>
-              </fieldset>
+              <div class="review__container review__container--visited">
+                <fieldset class="review__item review__item--visited">
+                  <legend class="review__caption review__caption--visited">Посещенные<br class="break"> достопримечательности:</legend>
+                  <div class="review__center">
+                    <label class="choice choice--checkbox">
+                      <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Мост Дьявола" checked>
+                      <span class="choice__text choice__text--checkbox">Мост Дьявола</span>
+                    </label>
+                    <label class="choice choice--checkbox">
+                      <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Гора-Колокол" checked>
+                      <span class="choice__text choice__text--checkbox">Гора-Колокол</span>
+                    </label>
+                    <label class="choice choice--checkbox">
+                      <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Слайд-парк" checked>
+                      <span class="choice__text choice__text--checkbox">Слайд-парк</span>
+                    </label>
+                    <label class="choice choice--checkbox">
+                      <input class="choice__input visually-hidden" type="checkbox" name="посещенные достопримечательности:" value="Красные скалы">
+                      <span class="choice__text choice__text--checkbox">Красные скалы</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
 
-              <fieldset class="review__item review__item--textarea input">
-                <legend class="review__caption">Опишите свои эмоции:</legend>
-                <textarea class="input__field input__field--textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-              </fieldset>
+              <div class="review__container review__container--textarea">
+                <fieldset class="review__item review__item--textarea input">
+                  <legend class="review__caption review__caption--textarea">Опишите свои эмоции:</legend>
+                  <textarea class="input__field input__field--textarea" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+                </fieldset>
+              </div>
 
-              <button class="review__button button" type="submit">Отправить отзыв</button>
-              <p class="review__legend">* — обязательные поля</p>
+              <div class="review__container review__container--button">
+                <button class="review__button button" type="submit">Отправить отзыв</button>
+                <p class="review__legend">* — обязательные поля</p>
+              </div>
             </form>
           </div>
 
@@ -140,15 +154,15 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="https://twitter.com" aria-label="Мы в Твиттере"></a>
             </li>
 
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com" aria-label="Мы в Фейсбуке"></a>
             </li>
 
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com">Мы в Ютубе</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com" aria-label="Мы в Ютубе"></a>
             </li>
           </ul>
         </div>

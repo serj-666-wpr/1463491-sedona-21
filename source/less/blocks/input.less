@@ -1,23 +1,81 @@
 .input {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   .input__label {
-    padding-right: 14px;
+    padding-right: 15px;
   }
 
   &--contact {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 56px;
+      height: 56px;
+      background-color: @grey-background;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+    }
 
     @media (min-width: @desktop-width) {
       flex-direction: row;
+      align-items: center;
+      width: 481px;
+      margin-bottom: 0;
+
+      &:first-of-type {
+        width: 401px;
+      }
     }
 
     .input__label {
       padding-left: 22px;
+      margin-bottom: 9px;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--phone {
+    &::after {
+      background-image: url("../img/phone.svg");
+    }
+  }
+
+  &--email {
+    .input__label {
+      @media (min-width: @desktop-width) {
+        width: 50%;
+      }
+    }
+
+    &::after {
+      background-image: url("../img/mail.svg");
     }
   }
 }
@@ -26,15 +84,20 @@
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
+  line-height: 26px;
   color: @black;
   border: none;
   background-color: @white-grey;
-  padding: 16px 22px 16px;
+  padding: 18px 22px 13px;
   width: 100%;
   box-sizing: border-box;
 
   &--textarea {
-    padding: 13px 21px 29px;
+    padding: 14px 20px 19px;
     resize: none;
+
+    @media (min-width: @tablet-width) {
+      padding: 17px 20px 14px;
+    }
   }
 }
