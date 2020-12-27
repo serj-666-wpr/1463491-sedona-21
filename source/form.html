@@ -11,8 +11,10 @@
 
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
-          <img class="page-header__image-desktop" src="img/logotype-desktop.svg" width="187" height="96" alt="Логотип сайта «Седона»">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+            <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
+          </picture>
         </a>
 
         <nav class="main-nav">

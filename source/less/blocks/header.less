@@ -4,9 +4,17 @@
   background-position: center bottom;
   background-size: 902px 214px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-header-mini@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/background-header.jpg");
-    background-size: auto;
+    background-size: 1200px 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-header@2x.jpg");
+    }
   }
 
   &--main {
