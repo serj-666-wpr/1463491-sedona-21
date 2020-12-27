@@ -10,12 +10,21 @@
   }
 
   &--main {
-    background-image: url("../img/background-header.jpg");
+    background-image: url("../img/background-header-mobile.jpg");
     background-position: center;
     background-size: 901px 389px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-header-mobile@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
+      background-image: url("../img/background-header.jpg");
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background-header@2x.jpg");
+      }
     }
   }
 }
