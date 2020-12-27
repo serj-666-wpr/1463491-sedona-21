@@ -11,8 +11,10 @@
 
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
-          <img class="page-header__image-desktop" src="img/logotype-desktop.svg" width="187" height="96" alt="Логотип сайта «Седона»">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+            <img class="page-header__image" src="img/logotype.svg" width="102" height="84" alt="Логотип сайта «Седона»">
+          </picture>
         </a>
 
         <nav class="main-nav">
@@ -60,7 +62,10 @@
               <li class="catalog__item catalog__item--first">
                 <figure class="photograph">
                   <a class="photograph__link" href="#">
-                    <img class="photograph__image photograph__image--first" src="img/non-native-spaces.jpg" width="280" height="280" alt="Дорога в американской пустыне во время заката">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/vastness.jpg 1x, img/vastness@2x.jpg 2x">
+                      <img class="photograph__image photograph__image--first" src="img/vastness-mobile.jpg" srcset="img/vastness-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в американской пустыне во время заката">
+                    </picture>
                   </a>
                   <figcaption class="photograph__legend photograph__legend--first">
                     <div class="photograph__wrapper">
@@ -81,7 +86,10 @@
               <li class="catalog__item">
                 <figure class="photograph">
                   <a class="photograph__link" href="#">
-                    <img class="photograph__image" src="img/local-vegetation.jpg" width="280" height="280" alt="Кактус в американской пустыне">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/local-vegetation.jpg 1x, img/local-vegetation@2x.jpg 2x">
+                      <img class="photograph__image" src="img/local-vegetation-mobile.jpg" srcset="img/local-vegetation-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус в американской пустыне">
+                    </picture>
                   </a>
                   <figcaption class="photograph__legend">
                     <div class="photograph__wrapper">
@@ -102,7 +110,10 @@
               <li class="catalog__item">
                 <figure class="photograph">
                   <a class="photograph__link" href="#">
-                    <img class="photograph__image" src="img/road-north.jpg" width="280" height="280" alt="Дорога в лесистых горах">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/road-north.jpg 1x, img/road-north@2x.jpg 2x">
+                      <img class="photograph__image" src="img/road-north-mobile.jpg" srcset="img/road-north-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в лесистых горах">
+                    </picture>
                   </a>
                   <figcaption class="photograph__legend">
                     <div class="photograph__wrapper">
@@ -123,7 +134,10 @@
               <li class="catalog__item">
                 <figure class="photograph">
                   <a class="photograph__link" href="#">
-                    <img class="photograph__image" src="img/devil-bridge.jpg" width="280" height="280" alt="Естественный мост из скал">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/devil-bridge.jpg 1x, img/devil-bridge@2x.jpg 2x">
+                      <img class="photograph__image" src="img/devil-bridge-mobile.jpg" srcset="img/devil-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Естественный мост из скал">
+                    </picture>
                   </a>
                   <figcaption class="photograph__legend">
                     <div class="photograph__wrapper">
@@ -158,9 +172,11 @@
 
           <div class="video">
             <div class="video__wrapper">
-              <video class="video__content" poster="img/video-mobile.jpg" width="320" height="201">
-                <source src="" type="">
-              </video>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img class="video__content" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="201" alt="Видио-презентация">
+              </picture>
 
               <div class="video__controls-wrapper">
                 <div class="video__controls">
