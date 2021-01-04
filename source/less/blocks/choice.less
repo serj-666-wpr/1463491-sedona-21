@@ -74,4 +74,20 @@
       }
     }
   }
+
+  &:hover {
+    &::before {
+      background-color: @grey-light;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @grey;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }

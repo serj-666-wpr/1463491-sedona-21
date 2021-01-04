@@ -18,22 +18,28 @@
 }
 
 .social__link {
+  position: relative;
   display: block;
   width: 46px;
   height: 48px;
   background-color: @blue;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  &--twitter {
-    background-image: url("../img/twitter.svg");
+  &:hover {
+    background-color: @blue-dark;
   }
 
-  &--facebook {
-    background-image: url("../img/facebook.svg");
-  }
+  &:active {
+    background-color: @blue-darker;
 
-  &--youtube {
-    background-image: url("../img/youtube.svg");
+    .social__link-image {
+      opacity: 0.3;
+    }
   }
+}
+
+.social__link-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

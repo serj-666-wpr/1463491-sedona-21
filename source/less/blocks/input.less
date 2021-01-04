@@ -70,7 +70,7 @@
   &--email {
     .input__label {
       @media (min-width: @desktop-width) {
-        width: 50%;
+        width: 54%;
       }
     }
 
@@ -93,6 +93,10 @@
   box-sizing: border-box;
   margin: 0;
 
+  &--contact {
+    padding: 18px 78px 13px 22px;
+  }
+
   &--textarea {
     padding: 14px 20px 19px;
     resize: none;
@@ -100,5 +104,15 @@
     @media (min-width: @tablet-width) {
       padding: 17px 20px 14px;
     }
+  }
+
+  &:hover {
+    background-color: @grey-light;
+  }
+
+  &:active {
+    background-color: @white;
+    outline: 4px solid @grey-light;
+    outline-offset: -4px;
   }
 }

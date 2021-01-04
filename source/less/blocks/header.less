@@ -1,8 +1,10 @@
 .header {
+  position: relative;
   background-image: url("../img/background-header-mini.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 902px 214px;
+  border-bottom: 1px solid @white;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background-header-mini@2x.jpg");
@@ -35,6 +37,22 @@
       }
     }
   }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 600px;
+    height: 57px;
+    background-image: url("../img/corner.svg");
+  }
+
+  // &::after {
+  //   left: 50%;
+  //   transform: scaleX(-1);
+  // }
 }
 
 .header__caption {

@@ -9,4 +9,18 @@
   color: @white;
   padding: 16px 32px;
   text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @blue-dark;
+  }
+
+  &:active {
+    color: @white-opacity;
+    background-color: @blue-darker;
+  }
+
+  &:disabled {
+    background-color: @grey-light;
+  }
 }
