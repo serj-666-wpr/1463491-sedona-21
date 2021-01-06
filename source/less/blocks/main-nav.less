@@ -1,5 +1,18 @@
 .main-nav {
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 7px;
+    background-image: linear-gradient(180deg, @opacity, @low-opacity 100%);
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+  }
 }
 
 .main-nav__button {
@@ -29,6 +42,18 @@
       0 16px 0 0 @blue;
   }
 
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   &--close {
     top: 0;
 
@@ -49,6 +74,20 @@
 
     &::after {
       transform: rotate(-45deg);
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 }
@@ -92,7 +131,16 @@
     box-shadow:
       0 1px 0 @black-opacity,
       inset 0 1px 0 @white-opacity;
-    border-bottom: 1px solid @blue-dakrer;
+    border-bottom: 1px solid @blue-darker;
+
+    &:hover {
+      background-color: @blue-dark;
+    }
+
+    &:active {
+      color: @white-opacity;
+      background-color: @blue-darker;
+    }
 
     @media (min-width: @tablet-width) {
       font-size: 14px;
@@ -100,6 +148,33 @@
       background-color: transparent;
       box-shadow: none;
       border-bottom: none;
+
+      &:hover {
+        color: @blue;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: @black-opacity-low;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      a {
+        color: @brown-light;
+
+        &:hover {
+          color: @brown;
+        }
+
+        &:active {
+          color: @brown-light;
+          opacity: 0.3;
+        }
+      }
     }
   }
 }
