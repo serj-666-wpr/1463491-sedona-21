@@ -95,6 +95,31 @@
   background-color: transparent;
   z-index: 1;
 
+  &:hover {
+    cursor: pointer;
+
+    & .video__button-image {
+      fill: @grey-dark;
+
+      @media (min-width: @tablet-width) {
+        fill: @white;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:active {
+    & .video__button-image {
+      fill: @grey-dark;
+      opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        fill: @white;
+        opacity: 0.3;
+      }
+    }
+  }
+
   &--replay {
     margin: 0 auto 0 19px;
 
