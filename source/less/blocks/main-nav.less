@@ -56,39 +56,26 @@
 
   &--close {
     top: 0;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 26px;
-      right: 17px;
-      width: 27px;
-      height: 4px;
-      background-color: @white;
-    }
+    background-image: url("../img/icons/close.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: center;
 
     &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
+      content: none;
     }
 
     &:hover {
-      &::before,
-      &::after {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
     }
 
     &:active {
-      &::before,
-      &::after {
-        opacity: 0.3;
-      }
+      opacity: 0.3;
     }
+  }
+
+  &--none {
+    display: none;
   }
 }
 
@@ -101,6 +88,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     &::before {
