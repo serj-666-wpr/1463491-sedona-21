@@ -26,9 +26,10 @@ const inputEmail = document.querySelector(".input__field--email");
 // Open
 
 modalOpen.addEventListener("click", function (evt) {
-	if (inputName.value && inputSurname.value && inputPhone.value && inputEmail.value) {
+  if (inputName.value && inputSurname.value && inputPhone.value && inputEmail.value)
+  {
     modalSuccess.classList.add("modal--current");
-	} else {
+  } else {
     modalFailure.classList.add("modal--current");
     if (!inputName.value) {
       inputName.classList.add("input__field--invalid");
@@ -43,21 +44,26 @@ modalOpen.addEventListener("click", function (evt) {
       inputEmail.classList.add("input__field--invalid");
     }
   }
-});
+}
+);
 
 // Close
 
 modalCloseSuccess.addEventListener("click", function (evt) {
-	modalSuccess.classList.remove("modal--current");
-});
+  modalSuccess.classList.remove("modal--current");
+}
+);
 
 modalCloseFailure.addEventListener("click", function (evt) {
-	modalFailure.classList.remove("modal--current");
-});
+  modalFailure.classList.remove("modal--current");
+}
+);
 
 document.addEventListener("keydown", function (evt) {
-	if (evt.keyCode === 27) {
+  if (evt.keyCode === 27)
+  {
     modalSuccess.classList.remove("modal--current");
     modalFailure.classList.remove("modal--current");
-	}
-});
+  }
+}
+);
