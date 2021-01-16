@@ -63,7 +63,7 @@
 
   &--phone {
     &::after {
-      background-image: url("../img/phone.svg");
+      background-image: url("../img/icons/phone.svg");
     }
   }
 
@@ -75,7 +75,7 @@
     }
 
     &::after {
-      background-image: url("../img/mail.svg");
+      background-image: url("../img/icons/mail.svg");
     }
   }
 }
@@ -90,10 +90,12 @@
   background-color: @white-grey;
   padding: 18px 22px 13px;
   width: 100%;
+  min-width: 100px;
   box-sizing: border-box;
   margin: 0;
 
-  &--contact {
+  &--phone,
+  &--email {
     padding: 18px 78px 13px 22px;
   }
 
@@ -104,6 +106,10 @@
     @media (min-width: @tablet-width) {
       padding: 17px 20px 14px;
     }
+  }
+
+  &--invalid {
+    outline: 4px solid @red;
   }
 
   &:hover {

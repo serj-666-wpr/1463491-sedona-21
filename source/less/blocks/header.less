@@ -1,50 +1,65 @@
 .header {
-  position: relative;
-  background-image: url("../img/background-header-mini.jpg");
+  background-image:
+    url("../img/icons/corner.svg"),
+    url("../img/background-header-mini.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 902px 214px;
-  border-bottom: 1px solid @white;
+  background-size:
+    1200px 57px,
+    902px 214px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-header-mini@2x.jpg");
+    background-image:
+      url("../img/icons/corner.svg"),
+      url("../img/background-header-mini@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/background-header.jpg");
-    background-size: 1200px 518px;
+    background-image:
+      url("../img/icons/corner.svg"),
+      url("../img/background-header.jpg");
+    background-size:
+      1200px 57px,
+      1200px 518px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-header@2x.jpg");
+      background-image:
+        url("../img/icons/corner.svg"),
+        url("../img/background-header@2x.jpg");
     }
   }
 
   &--main {
-    background-image: url("../img/background-header-mobile.jpg");
-    background-position: center;
-    background-size: 901px 389px;
+    background-image:
+      url("../img/icons/corner.svg"),
+      url("../img/background-header-mobile.jpg");
+    background-position:
+      center bottom,
+      center;
+    background-size:
+      1200px 57px,
+      901px 389px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-header-mobile@2x.jpg");
+      background-image:
+        url("../img/icons/corner.svg"),
+        url("../img/background-header-mobile@2x.jpg");
     }
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/background-header.jpg");
-      background-size: cover;
+      background-image:
+        url("../img/icons/corner.svg"),
+        url("../img/background-header.jpg");
+      background-size:
+        1200px 57px,
+        cover;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/background-header@2x.jpg");
+        background-image:
+          url("../img/icons/corner.svg"),
+          url("../img/background-header@2x.jpg");
       }
     }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 57px;
-    background-image: url("../img/corner.svg");
   }
 }
 
