@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -76,7 +78,7 @@
                       <p class="photograph__text">Автор фото: Борис</p>
                     </div>
                     <div class="photograph__likes">
-                      <a class="photograph__like" href="">
+                      <a class="photograph__like" href="" aria-label="Лайк">
                         <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="img/icons/sprite.svg#like"></use>
                         </svg>
@@ -103,7 +105,7 @@
                       <p class="photograph__text">Автор фото: Сергей</p>
                     </div>
                     <div class="photograph__likes">
-                      <a class="photograph__like" href="">
+                      <a class="photograph__like" href="" aria-label="Лайк">
                         <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="img/icons/sprite.svg#like"></use>
                         </svg>
@@ -130,7 +132,7 @@
                       <p class="photograph__text">Автор фото: Петр</p>
                     </div>
                     <div class="photograph__likes">
-                      <a class="photograph__like" href="">
+                      <a class="photograph__like" href="" aria-label="Лайк">
                         <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="img/icons/sprite.svg#like"></use>
                         </svg>
@@ -157,7 +159,7 @@
                       <p class="photograph__text">Автор фото: Антон</p>
                     </div>
                     <div class="photograph__likes">
-                      <a class="photograph__like" href="">
+                      <a class="photograph__like" href="" aria-label="Лайк">
                         <svg class="photograph__like-image" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="img/icons/sprite.svg#like"></use>
                         </svg>
@@ -197,17 +199,17 @@
               <div class="video__controls-wrapper">
                 <div class="video__controls">
                   <div class="video__slider"></div>
-                  <button class="video__button video__button--replay">
+                  <button class="video__button video__button--replay" aria-label="Запустить заново">
                     <svg class="video__button-image" width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/icons/sprite.svg#replay"></use>
                     </svg>
                   </button>
-                  <button class="video__button video__button--subtitles">
+                  <button class="video__button video__button--subtitles" aria-label="Субтитры">
                     <svg class="video__button-image" width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/icons/sprite.svg#subtitles"></use>
                     </svg>
                   </button>
-                  <button class="video__button video__button--size">
+                  <button class="video__button video__button--size" aria-label="Размер">
                     <svg class="video__button-image" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/icons/sprite.svg#size"></use>
                     </svg>
@@ -252,7 +254,7 @@
 
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__image" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
             </svg>
