@@ -44,20 +44,17 @@ modalOpen.addEventListener("click", function (evt) {
       inputEmail.classList.add("input__field--invalid");
     }
   }
-}
-);
+});
 
 // Close
 
 modalCloseSuccess.addEventListener("click", function (evt) {
   modalSuccess.classList.remove("modal--current");
-}
-);
+});
 
 modalCloseFailure.addEventListener("click", function (evt) {
   modalFailure.classList.remove("modal--current");
-}
-);
+});
 
 document.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27)
@@ -65,5 +62,4 @@ document.addEventListener("keydown", function (evt) {
     modalSuccess.classList.remove("modal--current");
     modalFailure.classList.remove("modal--current");
   }
-}
-);
+});
